@@ -1,0 +1,27 @@
+<div class="container">   
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1 article-outline">
+      <h3><a href="<%= @article.url %>"><%= @article.article_title %></a></h3>
+      <%= form_tag '/api/v1/articles', method: :post do%>
+        <%= hidden_field_tag :id, @article.id %>
+        <%= hidden_field_tag :article_title, @article.article_title %>
+        <%= hidden_field_tag :url, @article.url %>
+        <%= hidden_field_tag :content, @article.content %>
+        <%= hidden_field_tag :image, @article.image %>
+        <%= hidden_field_tag :summary, @article.summary %>
+        <%= submit_tag 'Save Article', class: "btn btn-primary"%>
+      <% end %>
+      <div>
+        <p><%= @article.content.html_safe %></p>
+      </div>
+      <%= form_tag '/api/v1/articles', method: :post do%>
+        <%= hidden_field_tag :id, @article.id %>
+        <%= hidden_field_tag :article_title, @article.article_title %>
+        <%= hidden_field_tag :url, @article.url %>
+        <%= hidden_field_tag :content, @article.content %>
+        <%= hidden_field_tag :image, @article.image %>
+        <%= hidden_field_tag :summary, @article.summary %>
+        <%= submit_tag 'Save Article', class: "btn btn-primary"%>
+      <% end %>
+    </div>
+  </div>

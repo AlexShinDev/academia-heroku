@@ -1,0 +1,41 @@
+<div class="container container-padding">
+  <h4 class="biblio">Bibliography</h4>
+  <div class="row biblio">
+    <h5 class="col-md-6 col-md-offset-3">
+      <span><%= @article.generatebib %></span>
+    </h5>
+  </div>
+  <div class="row article-highlight-spacing">
+    <div id="article_show" class="col-md-7 article-outline-show">
+      <h3><a href="<%= @article.url %>"><%= @article.article_title %></a></h3>
+      <div id="article-content">
+        <p><%= @article.content.html_safe %></p>
+      </div>
+         <%= link_to "Delete Article", "/api/v1/articles/#{ @article.id }", method: :delete, class: "btn btn-danger"%>
+    </div>
+
+    <div class="col-md-4 highlight-outline">
+      <h3 id="header-text">Highlights</h3>
+      <div id="scroll-highlights">
+        <div>
+          <span id="selection"></span>
+          <span hidden id="showUserId"><%= current_user.id %></span>
+          <span hidden id="showArticleId"><%= @article.id %></span>
+          <button onclick="sendHighlight()" class="btn btn-primary">Save Highlight</button>
+        </div>
+        <div id="refreshHighlights">
+          <% @article.highlights.reverse_each do |highlight| %>
+            <div>
+              <p id="show-highlights"><span id="selection-highlight"><%= highlight.selection %></span>
+                <span><%= link_to " ", "/api/v1/highlights/#{ highlight.id }", method: :delete, class: "refresh glyphicon glyphicon-trash"%></span>
+                <a onclick="searchHighlight('<%= highlight.selection %>')" class="glyphicon glyphicon-search"></a>
+              </p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
