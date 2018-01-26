@@ -1,3 +1,74 @@
-// Place all the styles related to the api/v1/articles controller here.
+// Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.nav-background {
+  margin: 20;
+  padding: 20;
+  background-color: #FF5432;
+}
+
+.highlight{
+  background-color: yellow;
+}
+
+#scrollResults {
+  color: white;
+  background-color: #FF5432; 
+  border-radius: 25px;
+  padding: 0px 10px;
+}
+
+.biblio {
+  text-align: center;
+}
+
+.biblio h5{
+  margin-top: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.article-highlight-spacing {
+  padding: 30px 0;
+}
+
+.article-outline {
+  border-style: solid;
+  border-width: 1px;
+  margin: 20px 50px;
+}
+.article-outline-show {
+  border-style: solid;
+  border-width: 1px;
+  margin-right: 50px;
+  overflow-x: hidden;
+}
+
+#scroll-highlights {
+  overflow: scroll;
+  height: 600px;
+}
+
+// #header-text {
+//   text-align: center;
+// }
+#show-highlights {
+  border-style: dotted;
+  border-width: 1px;
+  padding: 2px 7px;
+}
+// .nav-header {
+//   background-attachment: 
+// }
+
+.highlight-icon {
+  text-align: left;
+}
+
+.container-padding {
+  padding: 10px 50px;
+}
+
+

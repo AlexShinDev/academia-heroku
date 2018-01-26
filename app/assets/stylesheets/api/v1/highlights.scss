@@ -1,3 +1,70 @@
-// Place all the styles related to the api/v1/highlights controller here.
+// Place all the styles related to the Highlights controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#search-div input {
+  width:75%;
+}
+#wikipedia-heading {
+  text-align: center;
+}
+
+.highlight-yellow {
+  background-color: yellow;
+}
+
+#search-div.heading {
+  border-radius:25px;
+  margin:1%;
+  padding:1%;
+  display:inline-block;
+  font-family:'Lobster';
+}
+#search-div.heading img {
+  background-color:#0099cc;
+  border-radius:25px;
+  display:inline-block;
+  font-family:'Lobster';
+  width:50%;
+}
+#search-div a { color: inherit; 
+} 
+#search-div h2 {
+  color:black;
+  padding-left:1%;
+  padding-top:1%;
+}
+#search-div p {
+  padding-bottom: 1%;
+  padding-left:1%;
+  font-size:25px;
+}
+#search-div {
+  border-radius:25px;
+}
+
+#output {
+  margin-top:1%;
+  border-radius:25px;
+  font-family:'Lobster';
+}
+
+.search-article {
+  border-style: solid;
+  border-color: #FF5432;
+  border-radius: 25px;
+}
+
+#search-div h2 {
+  font-family:Times New Roman;
+}
+
+.highlight-outline {
+  border-style: solid;
+  border-width: 1px;
+}
+
+
+// .fix-search {
+//   position: fixed;
+//   top: 10px;
+// }
