@@ -23,7 +23,7 @@
               <img src="<%= article.image %>">
             </div> -->
             <div class="desc">
-              <h3><a href="/api/v1/articles/user_article/<%= article.id %>"><%= article.article_title %></a></h3>
+              <h3><a href="/api/v1/articles/user_article/<%= article.id %>"><%= article.name %></a></h3>
               <%= link_to "Delete Article", "/api/v1/articles/#{ article.id }", method: :delete, class: "btn btn-danger"%>
             </div>
           </div>

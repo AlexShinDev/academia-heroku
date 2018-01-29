@@ -23,7 +23,7 @@ class Api::V1::HighlightsController < ApplicationController
   end
 
   def api_find_create
-   article = Article.find_or_create_by!(article_title: params[:article_title], user_id: 1)
+   article = Article.find_or_create_by!(name: params[:name], user_id: 1)
    Highlight.create(
                   selection: params[:selection],
                   article_id: article.id,

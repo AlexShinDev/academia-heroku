@@ -6,14 +6,14 @@ Rails.application.routes.draw do
       get '/articles' => 'articles#index'
       get '/articles' => 'articles#new'
       post '/articles' => 'articles#create'
-      get '/articles/:article_title' => 'articles#lookup'
+      get '/articles/:name' => 'articles#lookup'
       get '/articles/user_article/:id' => 'articles#show'
       delete '/articles/:id' => 'articles#destroy'
       get '/contact' => 'articles#contact'
 
       get '/highlights' => 'highlights#index'
       post '/highlights' => 'highlights#create'
-      post '/highlights/extension/:article_title' => 'highlights#api_find_create'
+      post '/highlights/extension/:name' => 'highlights#api_find_create'
       patch '/highlights/:id' => 'highlights#update'
       delete '/highlights/:id' => 'highlights#destroy'
 
