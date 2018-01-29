@@ -6,7 +6,7 @@ class Article < ApplicationRecord
 
   def initialize(options_hash)
     super(options_hash)
-    wiki_article = Wikipedia.find(article_title)
+    wiki_article = Wikipedia.find(name)
     wiki_content = wiki_article.sanitized_content.gsub(/(== ==|==)/, "<br />")
     update(
             url: wiki_article.fullurl,
@@ -20,7 +20,7 @@ class Article < ApplicationRecord
 
   def generatebib
     sanitized_created_at = created_at.strftime("%d %B %Y")
-    @biblio = "#{article_title}. 'Wikipedia: The Free Encyclopedia'. #{publisher}. #{medium}. #{sanitized_created_at}"
+    @biblio = "#{name}. 'Wikipedia: The Free Encyclopedia'. #{publisher}. #{medium}. #{sanitized_created_at}"
   end
 
   def self.rand_articles
@@ -32,7 +32,7 @@ class Article < ApplicationRecord
 
     wiki_articles.each do |wiki_article|
       article = Article.new(
-                            article_title: wiki_article.title,
+                            name: wiki_article.title,
                             url: wiki_article.fullurl,
                             image: wiki_article.main_image_url,
                             summary: wiki_article.summary
@@ -42,12 +42,14 @@ class Article < ApplicationRecord
     articles
   end
 
+
   def self.wiki_find(title)
+    p title
     wiki_article = Wikipedia.find(title)
 
     wiki_content = wiki_article.sanitized_content.gsub(/(== ==|==)/, "<br />")
     article = Article.new(
-                          article_title: wiki_article.title,
+                          name: wiki_article.title,
                           url: wiki_article.fullurl,
                           publisher: "Wikimedia Foundation, Inc",
                           medium: "Web",

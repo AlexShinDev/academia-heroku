@@ -1,3 +1,4 @@
+require 'wikipedia'
 class Api::V1::ArticlesController < ApplicationController
   def home
   end
