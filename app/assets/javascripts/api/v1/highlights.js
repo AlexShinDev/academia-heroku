@@ -41,7 +41,7 @@ function sendHighlight() {
   let articleId = parseInt(document.getElementById('showArticleId').innerHTML);
 
   $.post(
-        "http://localhost:3000/api/v1/highlights",
+        "https://safe-forest-98598.herokuapp.com/api/v1/highlights",
         {
           selection: highlightSelection,
           user_id: userId,
