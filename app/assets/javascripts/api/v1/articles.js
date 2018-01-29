@@ -15,7 +15,7 @@ $(function() {
           $("html, body").animate({ scrollTop: 780 }, 500);
           $("#output").html();
           for (var i = 0;i < data[1].length;i++) {
-            $("#output").prepend("<div><div class='well search-article'><a href='http://localhost:3000/api/v1/articles/" + data[1][i] + "'><h2>" + data[1][i] + "</h2>" + "<p>" + data[2][i] + "</p></a></div></div>");
+            $("#output").prepend("<div><div class='well search-article'><a href='https://safe-forest-98598.herokuapp.com/api/v1/articles/" + data[1][i] + "'><h2>" + data[1][i] + "</h2>" + "<p>" + data[2][i] + "</p></a></div></div>");
           }
         }
       });
@@ -36,7 +36,7 @@ $(function() {
         $("html, body").animate({ scrollTop: 780 }, 500);
         $("#output").html("");
         for (var i = 0;i < data[1].length;i++) {
-          $("#output").prepend("<div><div class='well search-article'><a href='http://localhost:3000/api/v1/articles/" + data[1][i] + "'><h2>" + data[1][i] + "</h2>" + "<p>" + data[2][i] + "</p></a></div></div>");
+          $("#output").prepend("<div><div class='well search-article'><a href='https://safe-forest-98598.herokuapp.com/api/v1/articles/" + data[1][i] + "'><h2>" + data[1][i] + "</h2>" + "<p>" + data[2][i] + "</p></a></div></div>");
         }
       }
     });  
